@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <div class="box">
+      <div class="small"></div>
+    </div>
+    <style>
+      .box {
+        width: 500px;
+        height: 200px;
+        background-color: lightblue;
+      }
+      .small {
+        width: 100px;
+        height: 100px;
+        background-color: lightcoral;
+        transition: transform 3s linear;
+      }
+
+      .box:hover .small {
+        /* transition: transform 3s linear; */
+        transform: translateX(400px);
+      }
+    </style> -->
+
+    <!-- <div class="box">
+      <div class="small"></div>
+    </div>
+    <style>
+      .box {
+        width: 500px;
+        height: 500px;
+        background-color: lightblue;
+      }
+      .small {
+        width: 100px;
+        height: 100px;
+        background-color: lightcoral;
+
+        transform: translateX(100px);
+
+        /* 动画 */
+        /* animation: name动画名 duration动画时长 timing-function速度曲线 delay延迟 iteration-count重复次数 direction方向 fill-mode; */
+        /* animation: mymove 3s linear 0s 2; */
+        /* animation: mymove 3s linear 0s infinite; */
+
+        /* animation: mymove 3s linear 0s infinite reverse; */
+        /* animation: mymove 3s linear 0s infinite alternate; */
+
+        animation: mymove 10s linear 3s;
+        /* animation-fill-mode: none; */
+        /* animation-fill-mode: forwards;  */
+        /* 动画完成停留在动画目标状态 */
+
+        /* animation-fill-mode: backwards; */
+        /* 等待动画过程（延迟期间）应用初始帧状态 */
+        animation-fill-mode: both;
+
+        /* animation-play-state: paused; */
+      }
+      @keyframes mymove {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(400px);
+        }
+      }
+
+      /* @keyframes mymove {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(400px);
+        }
+      } */
+    </style> -->
+
+    <div class="box">
+      <div class="small"></div>
+    </div>
+    <style>
+      .box {
+        width: 500px;
+        height: 500px;
+        background-color: lightblue;
+      }
+      .small {
+        width: 100px;
+        height: 100px;
+        background-color: lightcoral;
+        transition: transform 3s linear;
+
+        animation: mymove 10s linear 0s;
+      }
+
+      .small:hover {
+        animation-play-state: paused;
+      }
+
+      @keyframes mymove {
+        0% {
+          transform: translate(0px, 0px);
+        }
+        25% {
+          transform: translate(400px, 0);
+          background-color: rgb(17, 255, 0);
+        }
+        50% {
+          transform: translate(400px, 400px);
+          background-color: rgb(255, 0, 149);
+        }
+        75% {
+          transform: translate(0, 400px);
+          background-color: rgb(217, 255, 0);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+    </style>
+  </body>
+</html>

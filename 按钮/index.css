@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+  margin: 50px 50px;
+  display: flex;
+  justify-content: space-around;
+}
+ul li {
+  margin: 20px;
+  position: relative;
+  transform-origin: left bottom;
+}
+ul li .a {
+  width: 100px;
+  height: 50px;
+  background-color: rgba(169, 189, 144, 0.513);
+  transition: all 1s ;
+}
+ul li .a:hover {
+  transform: rotate(720deg) scale(1.5);
+  background-color: blueviolet;
+}
+ul li .b {
+  position: relative;
+  animation: xx 0.7s infinite;
+  transform-origin: center center;
+}
+ul li .b::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 90px;
+  position: absolute;
+  top: -105px;
+  left: -35px;
+  background-color: red;
+  border-radius: 0 0 60px 60px   ;
+  transform-origin: right bottom;
+  transform: rotate(227deg);
+}
+ul li .b::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 90px;
+  position: absolute;
+  top: 0px;
+  background-color: red;
+  border-radius: 60px 60px 0 0 ;
+  transform-origin: left bottom;
+  transform: rotate(315deg);
+}
+.box {
+  margin: 40px 40px;
+  width: 200px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+.box .show::after {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-shadow: 10px 10px 0px 100px red inset;
+  transform-origin: left top;
+  animation: ass 3s  linear infinite;
+}
+.box .show::before {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  box-shadow: 10px 10px 0px 100px #51349e inset;
+  transform-origin: right bottom;
+  animation: ass 3s  linear infinite;
+}
+.box .top {
+  width: 190px;
+  height: 290px;
+  background-color: white;
+  position: absolute;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.wrap {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+.wrap span {
+  width: 50px;
+  height: 10px;
+  background-color: red;
+  display: block;
+  border-radius: 10px;
+  margin: 10px 0;
+  transition: all 0.5s;
+}
+@keyframes xx {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+@keyframes ass {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=./index.css.map */

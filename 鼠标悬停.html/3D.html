@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="warp">
+        <div class="knight">
+
+            <img src="./image/骑士.jpg" alt="" class="kni">
+            <img src="./image/3d骑士.png" alt="" class="kn">
+        </div>
+        <div class="mage">
+            <div class="cart">
+                <img src="./image/法师.jpg" alt="">
+            </div>
+            <img src="./image/force_mage-title.png" alt="" class="title">
+            <img src="./image/3d法师.png" alt="" class="ma">
+        </div>
+    </div>
+</body>
+<style>
+    .warp {
+        margin: 100px auto;
+        width: 800px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    /* 法师 */
+    .mage {
+        position: relative;
+        width: 202px;
+        height: 304px;
+        perspective: 500px;
+    }
+
+    .cart {
+        transition: all .3s;
+    }
+
+    .cart:after {
+        content: "";
+        width: 200px;
+        height: 304px;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* transform: rotateX(40deg); */
+        display: none;
+        background-color: rgba(0, 0, 0, 0.363);
+    }
+
+    .title,
+    .ma {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    .ma {
+        transform: translateY(-40px);
+        opacity: 0;
+        transition: all .3s;
+    }
+
+    .title {
+        transition: all .3s;
+    }
+
+    .cart:hover.cart::after {
+        display: block;
+        /* background-color: red; */
+    }
+
+    .cart:hover.cart:active {
+        background-color: rgba(221, 48, 48, 0.363);
+        display: block;
+    }
+
+    .mage:hover .cart {
+        transform: rotateX(40deg);
+    }
+
+    .mage:hover .ma {
+        transform: translateY(-100px) translateX(-10px) translateZ(70px);
+        opacity: 1;
+    }
+
+    .mage:hover .title {
+        transform: translateY(-10px) translateZ(70px);
+    }
+
+
+
+    /* 骑士 */
+    .knight {
+        perspective: 500px;
+        position: relative;
+        transition: all .3s;
+
+    }
+
+    .kni {
+        transition: all .3s;
+    }
+
+    /* .knight::before, */
+    .knight::after {
+        content: "";
+        width: 200px;
+        height: 304px;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: rotateX(40deg);
+        display: none;
+        background-color: rgba(0, 0, 0, 0.363);
+    }
+
+    .kn {
+        position: absolute;
+        left: 0;
+        transform-origin: center bottom;
+        opacity: 0;
+        /* transform: translateY(-55px); */
+        transition: all .3s;
+    }
+
+    .knight:hover .kni {
+        transform: rotateX(40deg);
+    }
+
+    .knight:hover .kn {
+        transform: translateY(-65px);
+        /* transform: translateY(-65px) translateZ(30px); */
+        opacity: 1;
+    }
+
+    /* .card:hover .wrapper::before, */
+    .knight:hover.knight::after {
+        display: block;
+        /* background-color: red; */
+    }
+</style>
+
+</html>

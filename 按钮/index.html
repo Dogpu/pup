@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <section>
+        <ul>
+            <li>
+                <div class="a">按钮</div>
+            </li>
+            <li>
+                <div class="b"></div>
+            </li>
+        </ul>
+        <div class="box">
+            <div class="show">
+            </div>
+            <div class="top"></div>
+        </div>
+        <div class="wrap">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </section>
+</body>
+<script src="./jquery.min.js"></script>
+<script>
+    var flag = true;
+    $(".wrap").click(function() {
+
+        if (flag) {
+            $(".wrap span").eq(0)[0].style.transform = " rotate(45deg) translateX(13px)"
+            $(".wrap span").eq(1)[0].style.transform = " rotate(-45deg) translateX(13px)"
+            flag = !flag;
+        } else {
+            $(".wrap span").eq(0)[0].style.transform = " rotate(0deg) translateX(0px)"
+            $(".wrap span").eq(1)[0].style.transform = " rotate(0deg) translateX(0px)"
+            flag = !flag;
+
+        }
+    })
+</script>
+
+</html>

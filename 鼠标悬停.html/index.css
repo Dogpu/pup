@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  background-color: pink;
+  list-style: none;
+  margin: 200px;
+}
+.warp li {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+.warp li .dog {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  background-image: url(image/修狗.jpg);
+  background-size: cover;
+  transition: all 0.3s;
+}
+.warp li .dog::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+.warp li .mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  background-color: rgba(90, 88, 88, 0.383);
+  transform: translateX(-200px);
+  opacity: 0;
+  transition: all 0.3s;
+  text-align: center;
+  line-height: 100px;
+}
+.warp li:hover .dog {
+  transform: rotate(-45deg);
+}
+.warp li:hover .mask {
+  transform: translateX(0px);
+  opacity: 1;
+}
+/*# sourceMappingURL=./index.css.map */
